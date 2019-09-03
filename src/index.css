@@ -1,0 +1,419 @@
+body {
+    font-family: Helvetica;
+    background-color: rgb(54, 57, 62);
+}
+
+
+
+
+/* =======  BOT LIST  ======= */
+/* ======= GUILD LIST ======= */
+
+.bot-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgb(32, 34, 37);
+    color: white;
+    width: 70px;
+    height: 100%;
+}
+
+.guild-list {
+    position: fixed;
+    left: 70px;
+    top: 0;
+    width: 70px;
+    height: 100%;
+
+    background: rgb(37, 39, 42);
+    color: white;
+}
+.bot-list ul, .guild-list ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+.bot-list ul li, .guild-list ul li {
+    cursor: pointer;
+    user-select: none;
+
+    margin-top: 10px;
+}
+.bot-list ul li img, .guild-list ul li img, .icon-div {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+.bot-list ul li img:hover, .guild-list ul li img:hover, .icon-div:hover {
+    border-radius: 15px;
+}
+.bot-list ul li .selected-img, .guild-list ul li .selected-img {
+    border-radius: 15px;
+}
+.icon-div {
+    text-align: center;
+}
+.icon-div p {
+    position: relative;
+    top: 17px;
+}
+.bot-list .icon-div {
+    background-color: rgb(47, 49, 54);
+}
+.guild-list .icon-div {
+    background-color: rgb(52, 54, 59);
+}
+.guild-list .icon-div.selected-img, .guild-list .icon-div:hover {
+    background-color: rgb(114, 137, 218);
+}
+.bot-list .nametag, .guild-list .nametag {
+    position: absolute;
+    left: 70px;
+    text-align: left;
+
+    z-index: 999;
+}
+.nametag p {
+    margin-top: 12px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+.guild-list .nametag p {
+    width: 200px;
+}
+
+
+.selected-spot {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    background-color: white;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.addbot-button {
+    color: rgb(83, 85, 89);
+
+    border: 1px dashed rgb(83, 85, 89);
+    border-radius: 25px;
+
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+.addbot-button:hover {
+    color: rgb(198, 199, 200);
+    border-color: rgb(198, 199, 200);
+}
+.addbot-button div {
+    position: relative;
+    font-size: 50px;
+    bottom: 5px;
+}
+
+
+/* ====== POP UPS ====== */
+.popup-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -200px;
+
+
+    width: 500px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    z-index: 100;
+}
+.pop-up h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    user-select: none;
+}
+.popup-submit {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid rgb(240, 240, 240);
+    background: rgb(249, 249, 249);
+    border-radius: 0px 0px 10px 10px;
+}
+.popup-submit input {
+    background: rgb(67, 181, 129);
+    border: 0px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: 0.2s;
+}
+.popup-submit input:hover {
+    background: rgb(60, 163, 116);
+}
+.addbot-input {
+    width: calc(100% - 100px);
+    margin-left: 40px;
+    border: 1px solid rgb(153, 170, 181);
+    border-radius: 5px;
+    padding: 10px;
+}
+.addbot-input-error {
+    border: 1px solid rgb(240, 71, 71);
+}
+.input-explain {
+    color: rgb(153, 170, 181);
+    font-size: 12px;
+    margin-left: 40px;
+    user-select: none;
+    display: inline;
+}
+.input-error {
+    color: rgb(240, 71, 71);
+    font-size: 12px;
+    display: inline;
+    margin-left: 10px;
+    user-select: none;
+}
+
+/* ======= GUILD ======== */
+.guild-content {
+    position: fixed;
+    top: 0;
+    left: 140px;
+    width: 100%;
+    height: 100%;
+}
+.channel-list {
+    width: 240px;
+    height: 100%;
+
+    background: rgb(47, 49, 54);
+}
+.guild-name {
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 240px;
+    height: 48px;
+    user-select: none;
+    cursor: pointer;
+
+    box-shadow: 0 1px 1px 0px rgba(30, 30, 30, 0.9);
+
+    transition: 0.5s;
+}
+
+.guild-name:hover {
+    background: rgb(42, 44, 49);
+}
+.guild-name h1 {
+    padding-top: 3px;
+    font-size: 17px;
+    margin-left: 20px;
+}
+.discussion {
+    position: absolute;
+    top: 0;
+    left: 240px;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54, 57, 62);
+}
+.discussion-title {
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 48px;
+
+    box-shadow: 0 1px 1px 0px rgba(30, 30, 30, 0.9);
+}
+.discussion-title h1 {
+    font-size: 19px;
+    margin-left: 20px;
+}
+
+/* ======= CHANNELS ======= */
+.guild-channels {
+    position: absolute;
+    top: 48px;
+    color: rgb(138, 142, 148);
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 48px);
+    width: 240px;
+}
+.guild-channels ul {
+    margin-top: 20px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 10px;
+
+    user-select: none;
+}
+.guild-channels ul li {
+    margin: 0;
+    padding: 0;
+}
+.category {
+    padding-bottom: 20px;
+}
+.category-title {
+    margin-bottom: 10px;
+}
+.category ul {
+    margin: 0;
+    padding: 0;
+}
+.channel-space {
+    height: 10px;
+}
+.channel {
+    margin-bottom: 2px;
+    padding: 5px;
+    white-space: nowrap;
+    /*          width - paddingLeft - thisPadding * 2 - 10px to create a padding right */
+    width: calc(240px - 10px - 10px - 10px);
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.channel:hover {
+    background: rgb(54, 57, 63);
+}
+.channel.selected{
+    background: rgb(66, 70, 77);
+}
+.channel-name {
+    display: inline-block;
+    margin-left: 5px;
+}
+.channel svg {
+    position: relative;
+    top: 2px;
+}
+
+
+/* SCROLLBAR */
+.guild-channels::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+.guild-channels::-webkit-scrollbar
+{
+	width: 6px;
+}
+.guild-channels::-webkit-scrollbar-thumb /* black bar that you select */
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(38, 40, 44);
+}
+
+
+
+
+
+/* ======= DISCUSSION ======== */
+.tchat {
+    position: absolute;
+    top: 48px;
+    height: calc(100% - 48px);
+    overflow-x: hidden;
+    width: calc(100% - 240px - 140px);
+}
+.tchat ul {
+    list-style-type: none;
+    margin-left: 80px;
+    padding: 0;
+}
+.tchat ul li {
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgb(62, 65, 70);
+    width: calc(100% - 20px);
+}
+.tchat ul li:last-child {
+    padding-bottom: 0px;
+    border-bottom: solid 0px rgb(0,0,0);
+}
+.message-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    left: 20px;
+    margin-top: 30px;
+}
+.message-data h3 {
+    display: inline-block;
+    font-size: 16px;
+}
+.message-date {
+    margin-left: 10px;
+    display: inline-block;
+    color: rgb(94, 97, 101);
+    font-size: 14px;
+}
+.message-content {
+    color: rgb(195, 196, 197);
+    position: relative;
+    bottom: 10px;
+}
+/* SCROLLBAR */
+.tchat::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+.tchat::-webkit-scrollbar
+{
+	width: 6px;
+}
+.tchat::-webkit-scrollbar-thumb /* black bar that you select */
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(38, 40, 44);
+}
+
+
+
+/* ====== GLOBAL ======= */
+textarea:focus, input:focus{
+    outline: none;
+}
+.blue-title {
+    /* BUTTON COLOR */
+    /* color: rgb(103, 123, 196); */
+    color: rgb(114, 137, 218);
+}
+.green-title {
+    color: rgb(67, 181, 129);
+}
