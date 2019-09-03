@@ -214,8 +214,3 @@ function findBotIndexById(botId) {
 const port = 8000;
 io.listen(port);
 console.log('listening on port ', port);
-
-/*
-NDM3NzI4ODY2MDIzMzc0ODU4.Db6VQA.eI6uI95DsY2D4H7jPYBDo56V_-g
-Mzg5NTI1NjMxNTEzMTMzMDU4.DcI0qg._ER0YLAL0cnnNPV-VXY1RyJ5YLY
-*/
